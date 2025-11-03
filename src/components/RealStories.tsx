@@ -83,40 +83,43 @@ export default function RealStories({
   }, [paused, speed, loopItems.length]);
 
   return (
-    <section className="w-full ">
-      <div className="mx-auto max-w-6xl ">
+    <section className="w-full  my-20">
         {/* Header row */}
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-[1fr_1.1fr_auto] md:items-start">
+        <div className="h-full px-32 grid grid-cols-1 gap-6 md:grid-cols-[1fr_1.1fr_auto] md:items-start">
           <div>
-            <div className="inline-flex items-center rounded-full border border-black/10 bg-white px-3 py-1 text-xs text-gray-600">
-              {overline}
-            </div>
+              <div className="inline-flex items-center justify-center rounded-2xl bg-[#F3EFED] px-3 py-1 text-[12px] md:text-[14px] text-[#2C3C44]">
+                {overline}
+              </div>
             <h2
-              className="mt-3 text-2xl sm:text-3xl lg:text-[28px] -tracking-[0.2px]"
-              style={{
-                color: "#2C3C44",
-                fontFamily:
-                  '"Fraunces 72pt Soft", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif',
-                fontWeight: 600,
-                lineHeight: "1.2",
-              }}
+                className="mt-auto text-[32px] md:text-[42px] font-semibold leading-12 md:leading-[61.6px] -tracking-[0.28px]"
+                style={{
+                  color: "#2C3C44",
+                  fontFamily: '"Fraunces", serif',
+                }}
             >
               {title}
             </h2>
           </div>
 
           <p
-            className="text-sm leading-6 text-gray-600"
-            style={{ fontFamily: "Giphurs, ui-sans-serif, system-ui" }}
+              className="mt-auto text-[14px] md:text-[16px] font-normal md:leading-[25.6px] leading-[22.4px] max-w-[560px] text-left"
+              style={{
+                color: "var(--Colors-Text-Secondary, #64737A)",
+                fontFamily: "Giphurs, ui-sans-serif, system-ui",
+              }}
           >
             {blurb}
           </p>
 
-          <div className="mt-2 md:mt-0 md:text-right">
+          <div className="mt-2 md:mt-auto md:text-right">
             <button
               onClick={onCtaClick}
-              className="inline-flex items-center justify-center rounded-full bg-[#9CC89B] px-5 py-2.5 text-sm font-semibold text-[#2C3C44] shadow-sm ring-1 ring-inset ring-black/10 transition hover:brightness-95"
-              style={{ fontFamily: "Giphurs, ui-sans-serif, system-ui" }}
+               className="rounded-full  px-5 py-3 text-[14px] md:text-[16px] font-medium"
+                style={{
+                  background: "#A8CFA1",
+                  color: "#2C3C44",
+                  fontFamily: "Giphurs, ui-sans-serif, system-ui",
+                }}
             >
               {ctaText}
             </button>
@@ -126,7 +129,7 @@ export default function RealStories({
         {/* Marquee track */}
         <div
           ref={trackRef}
-          className="mt-6 overflow-x-hidden [scrollbar-width:none] [-ms-overflow-style:none]"
+          className="mt-16 overflow-x-hidden [scrollbar-width:none] [-ms-overflow-style:none]"
           onMouseEnter={() => setPaused(true)}
           onMouseLeave={() => setPaused(false)}
           onTouchStart={() => setPaused(true)}
@@ -148,7 +151,6 @@ export default function RealStories({
             ))}
           </div>
         </div>
-      </div>
     </section>
   );
 }
@@ -157,39 +159,44 @@ export default function RealStories({
 
 function Card({ quote, name, age }: Testimonial) {
   return (
-    <figure
-      className="
-        relative w-[280px] sm:w-[320px] lg:w-[360px] shrink-0
-        rounded-xl border border-black/10 bg-white p-4 sm:p-5
-        shadow-sm
-      "
+<figure
+  className="
+    relative w-[280px] h-[198px] sm:w-[320px] lg:w-[360px] shrink-0
+    rounded-xl border border-black/10 bg-white p-4
+    shadow-sm
+    overflow-hidden
+    flex flex-col
+  "
+>
+  <p
+    className="md:text-[24px] text-[20px] font-light leading-8 text-[#64737A] italic mb-auto"
+    style={{
+      fontFamily: "Giphurs, ui-sans-serif, system-ui",
+      overflow: "hidden", // Ensures that overflow text doesn't escape the box
+      display: "block",  // Forces the text to be in a block-level container
+      wordWrap: "break-word",  // Ensures text wraps to the next line when it's too long
+      whiteSpace: "normal", // Allows text to wrap naturally
+    }}
+  >
+    {quote}
+  </p>
+
+  <figcaption className="mt-auto flex items-center justify-between">
+    <div
+      className="md:text-[16px] text-[14px] font-semibold text-[#64737A]"
+      style={{ fontFamily: "Giphurs, ui-sans-serif, system-ui" }}
     >
-      <blockquote
-        className="text-[15px] leading-7 text-gray-700 italic"
-        style={{ fontFamily: "Giphurs, ui-sans-serif, system-ui" }}
-      >
-        {quote}
-      </blockquote>
+      {name}
+      {age !== undefined ? (
+        <span className="ml-1 md:text-[14px] text-[12px] font-light text-[#64737A]">, {age}</span>
+      ) : null}
+    </div>
 
-      <figcaption className="mt-4 flex items-center justify-between">
-        <div
-          className="text-sm font-semibold text-[#2C3C44]"
-          style={{ fontFamily: "Giphurs, ui-sans-serif, system-ui" }}
-        >
-          {name}
-          {age !== undefined ? (
-            <span className="ml-1 font-normal text-gray-500">, {age}</span>
-          ) : null}
-        </div>
-
-        {/* closing quote mark */}
-        <span
-          className="select-none text-2xl leading-none text-gray-300"
-          aria-hidden="true"
-        >
-          ””
-        </span>
-      </figcaption>
-    </figure>
+    {/* Closing quote mark */}
+    <svg xmlns="http://www.w3.org/2000/svg" width="39" height="36" viewBox="0 0 39 36" fill="none">
+      <path d="M21.2659 1C21.2659 0.447715 21.7136 0 22.2659 0H38C38.5523 0 39 0.447715 39 1V18.0382C39 22.9809 37.2717 27.2102 33.815 30.7261C30.5955 34.0009 26.7457 35.7506 22.2658 35.9752C21.7142 36.0028 21.2659 35.5523 21.2659 35V28.1338C21.2659 27.5815 21.715 27.1399 22.2645 27.0845C24.3414 26.8754 26.1376 26.0001 27.6532 24.4586C29.1682 22.9176 30.0286 21.1104 30.2346 19.0368C30.2892 18.4872 29.8355 18.0382 29.2832 18.0382H22.2659C21.7136 18.0382 21.2659 17.5905 21.2659 17.0382V1ZM0 1C0 0.447715 0.447715 0 1 0H16.7341C17.2864 0 17.7341 0.447715 17.7341 1V18.0382C17.7341 22.9809 16.0058 27.2102 12.5491 30.7261C9.32956 34.0009 5.47982 35.7506 0.999898 35.9752C0.448306 36.0028 0 35.5523 0 35V28.1338C0 27.5815 0.449069 27.1399 0.998576 27.0845C3.07552 26.8754 4.87175 26.0001 6.38728 24.4586C7.90227 22.9176 8.76275 21.1104 8.96873 19.0368C9.02332 18.4872 8.56963 18.0382 8.01734 18.0382H1C0.447716 18.0382 0 17.5905 0 17.0382V1Z" fill="#DADADA"/>
+    </svg>
+  </figcaption>
+</figure>
   );
 }

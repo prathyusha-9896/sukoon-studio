@@ -1,5 +1,5 @@
 @import "tailwindcss";
-
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap');
 /* Keep your tokens */
 :root {
   --Colors-Text-Primary: #2c3c44;
@@ -25,3 +25,106 @@ body {
 
 /* (Optional) If you want global text color: */
 /* body { color: var(--Colors-Text-Primary); } */
+.footer {
+  background-color: #2c3e50;
+  color: white;
+  padding: 40px 20px;
+  position: relative; /* Footer will be relative initially */
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.footer.scrolled {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 999; /* Ensures it's on top */
+  transform: translateY(0); /* Slides up when scrolled */
+  opacity: 1;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-logo span {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.footer-services, .footer-resources, .footer-contact {
+  margin-top: 20px;
+}
+
+.footer-services ul, .footer-resources ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-services li, .footer-resources li {
+  margin: 5px 0;
+}
+
+.footer-bottom {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.footer-bottom ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.footer-bottom li {
+  display: inline;
+}
+
+.footer-bottom a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-bottom a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.hero-section {
+  background-image: url('/public/Footer.png'); /* Replace with the actual image URL */
+  background-size: cover;
+  background-position: center;
+  color: #2C3C44;
+  text-align: center;
+  padding: 100px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-content {
+  max-width: 800px;
+  text-align: center;
+  z-index: 1;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}

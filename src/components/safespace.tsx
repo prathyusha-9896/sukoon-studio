@@ -25,7 +25,7 @@ export default function SafeSpace({
   onCtaClick,
   leftImgSrc = "/image1.png",
   leftImgAlt = "Smiling person with folded arms",
-  rightImgSrc = "/image2.png",
+  rightImgSrc = "/safespace.png",
   rightImgAlt = "Person relaxing during therapy",
   caption = "This is where you can slow down.",
   stats = [
@@ -39,25 +39,24 @@ export default function SafeSpace({
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         {/* Header copy */}
         <div className="mx-auto max-w-3xl text-center pt-12 sm:pt-16">
-          <div className="inline-flex items-center justify-center rounded-full border border-black/10 bg-white px-3 py-1 text-xs text-gray-600">
+          <div className="inline-flex md:items-center md:justify-center rounded-2xl bg-[#F3EFED] px-3 py-1 md:text-[14px] text-[12px]  text-[#2C3C44]">
             {overline}
           </div>
 
           <h2
-            className="mt-4 text-balance text-3xl sm:text-4xl lg:text-5xl -tracking-[0.2px]"
-            style={{
-              color: "#2C3C44",
-              fontFamily:
-                '"Fraunces 72pt Soft", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif',
-              fontWeight: 600,
-              lineHeight: "1.15",
-            }}
+              className="mb-6 md:text-[56px] text-[40px] font-semibold md:leading-[61.6px] leading-12 md:text-center text-left -tracking-[0.28px]"
+              style={{
+                color: "var(--Colors-Text-Primary, #2C3C44)",
+                fontFamily:
+                  '"Fraunces 72pt Soft", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif',
+
+              }}
           >
             {title}
           </h2>
 
           <p
-            className="mx-auto mt-4 max-w-2xl text-base leading-7 text-gray-600"
+            className="mx-auto my-4 max-w-3xl md:text-base text-[14px] leading-7 text-gray-600"
             style={{ fontFamily: "Giphurs, ui-sans-serif, system-ui" }}
           >
             {blurb}
@@ -66,8 +65,12 @@ export default function SafeSpace({
           <button
             type="button"
             onClick={onCtaClick}
-            className="mt-6 inline-flex items-center justify-center rounded-full bg-[#9CC89B] px-6 py-3 text-sm font-semibold text-[#2C3C44] shadow-sm ring-1 ring-inset ring-black/10 transition hover:brightness-95"
-            style={{ fontFamily: "Giphurs, ui-sans-serif, system-ui" }}
+                className="rounded-full px-5 py-3 text-[14px] md:text-[16px] font-medium "
+                style={{
+                  background: "#A8CFA1",
+                  color: "#2C3C44",
+                  fontFamily: "Giphurs, ui-sans-serif, system-ui",
+                }}
           >
             {ctaText}
           </button>
@@ -86,44 +89,44 @@ export default function SafeSpace({
           </figure>
 
           {/* Right image card with caption pill */}
-          <figure className="relative overflow-hidden rounded-3xl shadow-md ring-1 ring-black/5">
+          <div className=" rounded-3xl ">
+            <div className="relative">
             <img
               src={rightImgSrc}
               alt={rightImgAlt}
-              className="h-full w-full object-cover"
-              style={{ aspectRatio: "16 / 10" }}
+              className=""
             />
             <figcaption className="pointer-events-none absolute bottom-4 right-4">
-              <span className="pointer-events-auto inline-block rounded-full bg-white/90 px-4 py-2 text-xs text-gray-800 shadow-sm ring-1 ring-black/10 backdrop-blur">
+              <span className="pointer-events-auto inline-block rounded-[12px] bg-[#F3EFED] px-4 py-3 md:text-[16px] text-[14px] text-[#64737A] ">
                 {caption}
               </span>
             </figcaption>
-          </figure>
-        </div>
-
+            </div>
+            
         {/* Stats */}
-        <div className="mx-auto mt-6 grid max-w-3xl grid-cols-3 items-start gap-4 text-center sm:mt-8">
+        <div className="mx-auto mt-6 grid max-w-3xl grid-cols-3 items-start gap-4 text-left md:mt-20">
           {stats.map((s, i) => (
-            <div key={i} className="flex flex-col items-center">
+            <div key={i} className="flex items-center space-x-2">
               <div
-                className="text-2xl sm:text-3xl"
+                className="md:text-[42px] text-[32px] "
                 style={{
                   color: "#2C3C44",
-                  fontFamily:
-                    '"Fraunces 72pt Soft", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif',
+                  fontFamily:'"Fraunces", serif',
                   fontWeight: 600,
                 }}
               >
                 {s.value}
               </div>
               <div
-                className="mt-1 whitespace-pre-line text-xs leading-5 text-gray-600"
+                className="mt-1 whitespace-pre-line md:text-[16px] text-[14px] font-medium leading-5 text-[#64737A]"
                 style={{ fontFamily: "Giphurs, ui-sans-serif, system-ui" }}
               >
                 {s.label}
               </div>
             </div>
           ))}
+        </div>
+          </div>
         </div>
 
         <div className="h-10 sm:h-14" />

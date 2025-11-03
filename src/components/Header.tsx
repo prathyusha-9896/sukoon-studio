@@ -10,8 +10,8 @@ const nav = [
 export default function Header() {
   return (
     <header className="w-full">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
-        <div className="flex h-20 items-center justify-between">
+      <div className="mx-auto w-full px-16 ">
+        <div className="flex h-20 items-center justify-start gap-28">
           {/* Logo */}
           <a
             href="#"
@@ -45,16 +45,15 @@ export default function Header() {
           </a>
 
           {/* Nav */}
-          <nav className="hidden items-center gap-8 md:flex">
+          <nav className="hidden items-left gap-8 md:flex">
             {nav.map((n) => (
               <a
                 key={n.label}
                 href={n.href}
-                className="text-sm"
+                className="text-[16px] font-medium"
                 style={{
-                  color: "var(--Colors-Text-Primary, #2C3C44)",
+                  color: "#2C3C44",
                   fontFamily: "Giphurs, ui-sans-serif, system-ui",
-                  fontWeight: 500,
                 }}
               >
                 {n.label}
@@ -63,15 +62,13 @@ export default function Header() {
           </nav>
 
           {/* CTA */}
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-3 ml-auto">
             <a
               href="#"
-              className="rounded-full px-4 py-2 text-sm shadow-sm ring-1 ring-black/5"
+              className="rounded-[21px] bg-[#FAF9F8] hover:bg-[#A8CFA1] px-4 py-2 text-[16px] font-medium"
               style={{
-                background: "#F7F8F9",
-                color: "var(--Colors-Text-Primary, #2C3C44)",
+                color: "#2C3C44",
                 fontFamily: "Giphurs, ui-sans-serif, system-ui",
-                fontWeight: 600,
               }}
             >
               Talk to us →

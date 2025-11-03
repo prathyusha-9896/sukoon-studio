@@ -15,7 +15,7 @@ function FeatureCard({
 }) {
   return (
       <div
-        className="rounded-[12px] gap-4 sm:gap-5 p-5 sm:p-8 mx-16 items-start"
+        className="rounded-[12px] p-5 sm:p-8 mx-16 items-start"
         style={{ backgroundColor: accent }}
       >
         {/* Icon container (left) */}
@@ -27,15 +27,15 @@ function FeatureCard({
           />
 
         {/* Text */}
-        <div className="min-w-0">
+        <div className="min-w-0 ">
           <h4
-            className="text-[15px] sm:text-base font-semibold text-[#2C3C44]"
-            style={{ fontFamily: '"Fraunces 72pt Soft", ui-serif, Georgia, serif' }}
+            className="md:text-[32px] text-[24px] pt-4 font-semibold leading-10 text-[#2C3C44]"
+            style={{fontFamily:'"Fraunces", serif', }}
           >
             {title}
           </h4>
           <p
-            className="mt-1 text-[13px] sm:text-sm leading-6 text-gray-600"
+            className="mt-1 md:text-[16px] text-sm leading-6 text-[#2C3C44] "
             style={{ fontFamily: 'Giphurs, ui-sans-serif, system-ui' }}
           >
             {subtitle}
@@ -46,7 +46,7 @@ function FeatureCard({
 }
 
 const LearnGerman: React.FC = () => {
-  const { COLORS, items } = useLearnGerman();
+  const {  items } = useLearnGerman();
 
   return (
     <section className="mx-auto max-w-[1700px] px-7 md:px-[120px] py-16 md:py-24 bg-[#ffffff]">
@@ -56,27 +56,28 @@ const LearnGerman: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-[minmax(0,1fr)_640px] gap-10 md:gap-14 md:h-full">
             {/* LEFT copy (sticky) */}
             <div className="md:sticky md:top-28 ">
-              <div
-                className="inline-block rounded-full px-3 py-1 mb-3"
-                style={{
-                  color: "#6B6A70",
-                  fontFamily: "Raveo Display, sans-serif",
-                  fontWeight: 400,
-                  fontSize: "14px",
-                  lineHeight: "21px",
-                  backgroundColor: COLORS.bannerText,
-                }}
+              <div className="inline-flex md:items-center md:justify-center rounded-2xl bg-[#FAF9F8] px-3 py-1 md:text-[14px] text-[12px]  text-[#2C3C44]"
               >
                 How We Can Support You
               </div>
 
-              <h2 className="text-[#242325] text-[28px] md:text-[40px] font-semibold leading-[50px]">
+              <h2 
+              className="mb-7 mt-5 md:text-[42px] text-[32px] font-semibold md:leading-[61.6px] leading-12 text-left -tracking-[0.28px]"
+              style={{
+                color: "var(--Colors-Text-Primary, #2C3C44)",
+                fontFamily:'"Fraunces", serif',
+              }}
+              >
                 Different journeys, one <br /> goal — helping you feel <br /> lighter.
               </h2>
 
               <button
-                className="mt-6 inline-flex items-center justify-center rounded-full bg-[#9CC89B] px-6 py-3 text-sm font-semibold text-[#2C3C44] shadow-sm ring-1 ring-inset ring-black/10 transition hover:brightness-95"
-                style={{ fontFamily: "Giphurs, ui-sans-serif, system-ui" }}
+                className="rounded-full px-5 py-3 text-[14px] md:text-[16px] font-medium "
+                style={{
+                  background: "#A8CFA1",
+                  color: "#2C3C44",
+                  fontFamily: "Giphurs, ui-sans-serif, system-ui",
+                }}
               >
                 Book Your First Session →
               </button>

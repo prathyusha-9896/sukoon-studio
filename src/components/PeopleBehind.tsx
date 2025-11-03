@@ -26,53 +26,59 @@ export default function PeopleBehind({
   photoDesc = `A psychologist who envisioned a softer kind of therapy — one that feels less like treatment and more like being gently understood. Her approach continues to shape the studio’s values: compassion, safety, and deep human connection.`,
 }: PeopleBehindProps) {
   return (
-    <section className="w-full bg-white">
-      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+    <section className="w-full bg-white pl-[120px] py-14">
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-2 lg:items-center">
           {/* LEFT: copy */}
           <div className="max-w-xl">
-            <div className="inline-flex items-center rounded-full border border-black/10 bg-white px-3 py-1 text-xs text-gray-600">
-              {overline}
-            </div>
+              <div className="inline-flex items-center justify-center rounded-2xl bg-[#F3EFED] px-3 py-1 text-[12px] md:text-[14px] text-[#2C3C44]">
+                {overline}
+              </div>
 
             <h2
-              className="mt-4 text-balance text-3xl sm:text-4xl lg:text-[40px] -tracking-[0.2px]"
-              style={{
-                color: "#2C3C44",
-                fontFamily:
-                  '"Fraunces 72pt Soft", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif',
-                fontWeight: 600,
-                lineHeight: "1.15",
-              }}
+                className="mb-auto mt-5 text-[32px] md:text-[42px] font-semibold leading-12 md:leading-[61.6px] -tracking-[0.28px]"
+                style={{
+                  color: "#2C3C44",
+                  fontFamily: '"Fraunces", serif',
+                }}
             >
               {title}
             </h2>
 
             <p
-              className="mt-4 text-[15px] leading-7 text-gray-600"
-              style={{ fontFamily: "Giphurs, ui-sans-serif, system-ui" }}
+              className="mb-6 text-[14px] md:text-[16px] font-normal md:leading-[25.6px] leading-[22.4px] max-w-[560px] text-left"
+              style={{
+                color: "var(--Colors-Text-Secondary, #64737A)",
+                fontFamily: "Giphurs, ui-sans-serif, system-ui",
+              }}
             >
               {body}
             </p>
 
             <p
-              className="mt-4 text-[15px] leading-7 text-[#2C3C44]"
-              style={{ fontFamily: "Giphurs, ui-sans-serif, system-ui", fontWeight: 600 }}
+              className="mb-8 text-[14px] md:text-[16px] font-semibold md:leading-[25.6px] leading-[22.4px] text-left"
+              style={{
+                color: "var(--Colors-Text-Primary, #2C3C44)",
+                fontFamily: "Giphurs, ui-sans-serif, system-ui",
+              }}
             >
               {emphasis}
             </p>
 
             <button
               onClick={onCtaClick}
-              className="mt-6 inline-flex items-center justify-center rounded-full bg-[#9CC89B] px-6 py-3 text-sm font-semibold text-[#2C3C44] shadow-sm ring-1 ring-inset ring-black/10 transition hover:brightness-95"
-              style={{ fontFamily: "Giphurs, ui-sans-serif, system-ui" }}
+               className="rounded-full  px-5 py-3 text-[14px] md:text-[16px] font-medium"
+                style={{
+                  background: "#A8CFA1",
+                  color: "#2C3C44",
+                  fontFamily: "Giphurs, ui-sans-serif, system-ui",
+                }}
             >
               {ctaText}
             </button>
           </div>
 
           {/* RIGHT: photo with gradient caption */}
-          <figure className="relative overflow-hidden rounded-2xl shadow-md ring-1 ring-black/5">
+          <figure className="relative overflow-hidden rounded-2xl shadow-md ">
             <img
               src={imageSrc}
               alt={imageAlt}
@@ -83,29 +89,25 @@ export default function PeopleBehind({
             <div className="pointer-events-none absolute inset-0 rounded-2xl bg-gradient-to-t from-black/55 via-black/5 to-transparent" />
 
             {/* caption block */}
-            <figcaption className="absolute flex gap-6 bottom-6 left-6 right-6">
+            <figcaption className="absolute flex gap-6 bottom-4 left-4 right-4">
               <div
-                className="text-white drop-shadow-sm w-1/2"
+                className="text-white text-[24px] leading-8 font-semibold drop-shadow-sm w-1/2"
                 style={{
-                  fontFamily:
-                    '"Fraunces 72pt Soft", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif',
+                  fontFamily:'"Fraunces", serif',
                   fontWeight: 600,
-                  fontSize: "20px",
-                  lineHeight: "1.3",
                 }}
               >
                 {photoTitle}
               </div>
               <p
-                className="mt-2 w-1/2 text-sm leading-6 text-white/90"
-                style={{ fontFamily: "Giphurs, ui-sans-serif, system-ui" }}
+                className="mt-2 w-[50%] text-[14px] leading-6 md:block hidden text-white/90"
+                style={{ fontFamily:'"Fraunces", serif', }}
               >
                 {photoDesc}
               </p>
             </figcaption>
           </figure>
         </div>
-      </div>
     </section>
   );
 }

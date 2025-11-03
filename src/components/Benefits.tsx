@@ -25,9 +25,8 @@ export default function Benefits({
   ],
 }: BenefitsProps) {
   return (
-    <section className="w-full bg-white">
-      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
-        <div className="grid grid-cols-1 gap-10 lg:grid-cols-2 lg:items-center">
+    <section className="w-full bg-white pr-[120px] pl-2 py-16">
+        <div className="grid grid-cols-1 gap-24 lg:grid-cols-2 lg:items-center">
           {/* Left: image card */}
           <figure className="overflow-hidden rounded-2xl shadow-md ring-1 ring-black/5">
             <img
@@ -39,26 +38,26 @@ export default function Benefits({
 
           {/* Right: copy */}
           <div className="max-w-xl">
-            <div className="inline-flex items-center rounded-full border border-black/10 bg-white px-3 py-1 text-xs text-gray-600">
-              {overline}
-            </div>
+              <div className="inline-flex items-center justify-center rounded-2xl bg-[#F3EFED] px-3 py-1 text-[12px] md:text-[14px] text-[#2C3C44]">
+                {overline}
+              </div>
 
             <h2
-              className="mt-4 text-balance text-3xl sm:text-4xl lg:text-[40px] -tracking-[0.2px]"
-              style={{
-                color: "#2C3C44",
-                fontFamily:
-                  '"Fraunces 72pt Soft", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif',
-                fontWeight: 600,
-                lineHeight: "1.15",
-              }}
+                className="mb-auto mt-5 text-[32px] md:text-[42px] font-semibold leading-12 md:leading-[61.6px] -tracking-[0.28px]"
+                style={{
+                  color: "#2C3C44",
+                  fontFamily: '"Fraunces", serif',
+                }}
             >
               {title}
             </h2>
 
             <p
-              className="mt-4 text-[15px] leading-7 text-gray-600"
-              style={{ fontFamily: "Giphurs, ui-sans-serif, system-ui" }}
+              className="mb-6 text-[14px] md:text-[16px] font-normal md:leading-[25.6px] leading-[22.4px] max-w-[560px] text-left"
+              style={{
+                color: "var(--Colors-Text-Secondary, #64737A)",
+                fontFamily: "Giphurs, ui-sans-serif, system-ui",
+              }}
             >
               {blurb}
             </p>
@@ -66,28 +65,34 @@ export default function Benefits({
             {/* Features */}
             <div className="mt-6">
               <div
-                className="text-sm font-semibold text-[#2C3C44] mb-2"
-                style={{ fontFamily: "Giphurs, ui-sans-serif, system-ui" }}
+              className="mb-8 text-[14px] md:text-[16px] font-semibold md:leading-[25.6px] leading-[22.4px] text-left"
+              style={{
+                color: "var(--Colors-Text-Primary, #2C3C44)",
+                fontFamily: "Giphurs, ui-sans-serif, system-ui",
+              }}
               >
                 Features
               </div>
               <ul className="space-y-2">
                 {features.map((f, i) => (
-                  <li key={i} className="flex items-start gap-2">
-                    <span className="mt-1 inline-block h-1.5 w-1.5 rounded-full bg-gray-300" />
-                    <span
-                      className="text-[15px] leading-7 text-gray-700"
-                      style={{ fontFamily: "Giphurs, ui-sans-serif, system-ui" }}
-                    >
-                      {f}
-                    </span>
-                  </li>
+                <li key={i} className="flex items-center gap-2">
+                  <span className="inline-block h-1.5 w-1.5 rounded-full bg-[#64737A]" />
+                  <span
+                    className="text-[14px] md:text-[16px] font-normal md:leading-[25.6px] leading-[22.4px] max-w-[560px] text-left"
+                    style={{
+                      color: "var(--Colors-Text-Secondary, #64737A)",
+                      fontFamily: "Giphurs, ui-sans-serif, system-ui",
+                    }}
+                  >
+                    {f}
+                  </span>
+                </li>
+
                 ))}
               </ul>
             </div>
           </div>
         </div>
-      </div>
     </section>
   );
 }

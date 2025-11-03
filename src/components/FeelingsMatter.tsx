@@ -31,23 +31,22 @@ export default function FeelingsMatter({
           {/* LEFT: Copy */}
           <div>
             {/* Overline pill */}
-            <div className="inline-flex items-center rounded-full border border-black/10 bg-white px-3 py-1 text-xs text-gray-600">
-              {overline}
-            </div>
+          <div className="inline-flex md:items-center md:justify-center rounded-2xl bg-[#F3EFED] px-3 py-1 md:text-[14px] text-[12px]  text-[#2C3C44]">
+            {overline}
+          </div>
 
             {/* Title */}
-            <h3
-              className="mt-4 text-balance text-3xl sm:text-4xl lg:text-[40px] -tracking-[0.2px]"
+            <h2
+              className="mb-7 mt-5 md:text-[42px] text-[32px] font-semibold md:leading-[61.6px] leading-12 text-left -tracking-[0.28px]"
               style={{
-                color: "#2C3C44",
+                color: "var(--Colors-Text-Primary, #2C3C44)",
                 fontFamily:
                   '"Fraunces 72pt Soft", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif',
-                fontWeight: 600,
-                lineHeight: "1.15",
+
               }}
             >
               {title}
-            </h3>
+            </h2>
 
             {/* Points */}
             <ul className="mt-6 space-y-3 text-[15px] leading-7 text-gray-600">
@@ -71,16 +70,13 @@ export default function FeelingsMatter({
                 src={imageSrc}
                 alt={imageAlt}
                 className="h-full w-full object-cover"
-                style={{ aspectRatio: "4 / 3" }}
               />
             </figure>
 
             <p
-              className="mt-4 text-[15px] italic text-gray-800"
+              className="mt-4 text-[32px] leading-10 italic text-[#2C3C44]"
               style={{
-                fontFamily:
-                  '"Fraunces 72pt Soft", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif',
-                lineHeight: "1.6",
+                fontFamily:'"Fraunces", serif',
               }}
             >
               {caption}
