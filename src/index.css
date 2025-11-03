@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+/* Keep your tokens */
+:root {
+  --Colors-Text-Primary: #2c3c44;
+  --Colors-Text-Secondary: #64737a;
+  --Scale-300: 12px;
+  /* (No display/align/justify here) */
+}
+
+/* Make the page scroll normally */
+html, body, #root {
+  height: auto;         /* allow natural height */
+  min-height: 100%;     /* ensure tall pages still fill */
+}
+
+body {
+  margin: 0;
+  display: block;       /* ✅ not flex */
+  overflow-x: hidden;   /* keep horizontal scroll away, Y remains scrollable */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+/* (Optional) If you want global text color: */
+/* body { color: var(--Colors-Text-Primary); } */
