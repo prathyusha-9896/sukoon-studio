@@ -24,7 +24,7 @@ const Footer: React.FC = () => {
   }, []);
 
   return (
-    <footer className={`bg-[#2C3C44] text-white transition-transform transition-opacity duration-300 ease-in-out`}>
+    <footer className={`bg-[#2C3C44] rounded-2xl text-white transition-transform transition-opacity duration-300 ease-in-out`}>
       <HeroSection />
       <div className="md:flex justify-between md:px-12 px-6  md:py-14 py-4">
         {/* Logo Section */}
