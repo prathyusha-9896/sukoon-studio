@@ -94,8 +94,8 @@ const Footer: React.FC = () => {
 
         {/* Services Section */}
         <div className="footer-services flex flex-col justify-start gap-4">
-          <h4 style={{fontFamily: "Giphurs",}}  className="md:text-base text-sm uppercase font-semibold">Services</h4>
-          <ul style={{fontFamily: "Giphurs",}} className="md:text-[16px] text-[14px] text-[#F3EFED] space-y-3">
+          <h4 style={{fontFamily: "Giphurs",}}  className="md:text-base text-sm uppercase font-semibold md:mt-0 mt-6">Services</h4>
+          <ul style={{fontFamily: "Giphurs",}} className="md:text-[16px] text-[14px] text-[#DADADA] space-y-3">
             <li>Individual Therapy</li>
             <li>Couples Therapy</li>
             <li>Child & Teen Therapy</li>
@@ -106,8 +106,8 @@ const Footer: React.FC = () => {
 
         {/* Resources Section */}
         <div className="footer-resources flex flex-col justify-start gap-4">
-          <h4 style={{fontFamily: "Giphurs",}}  className="md:text-base text-sm uppercase font-semibold">Resources</h4>
-          <ul  style={{fontFamily: "Giphurs",}} className="md:text-[16px] text-[14px] text-[#F3EFED] space-y-3">
+          <h4 style={{fontFamily: "Giphurs",}}  className="md:text-base text-sm uppercase font-semibold md:mt-0 mt-6">Resources</h4>
+          <ul  style={{fontFamily: "Giphurs",}} className="md:text-[16px] text-[14px] text-[#DADADA] space-y-3">
             <li>Our Blog</li>
             <li>Therapy Guides</li>
             <li>E-book</li>
@@ -117,8 +117,8 @@ const Footer: React.FC = () => {
 
         {/* Contact Info Section */}
         <div className="footer-contact flex flex-col justify-start gap-4">
-          <h4 style={{fontFamily: "Giphurs",}}  className="md:text-base text-sm uppercase font-semibold ">Contact Info</h4>
-          <ul  style={{fontFamily: "Giphurs",}} className="md:text-[16px] text-[14px] text-[#F3EFED] space-y-3">
+          <h4 style={{fontFamily: "Giphurs",}}  className="md:text-base text-sm uppercase font-semibold md:mt-0 mt-6">Contact Info</h4>
+          <ul  style={{fontFamily: "Giphurs",}} className="md:text-[16px] text-[14px] text-[#DADADA] space-y-3">
           <li >hello@sukoonstudio.com</li>
           <li>123, Peace Street, New <br /> Delhi, India</li>
           <li>+91 (98765) 43210</li>
@@ -127,12 +127,12 @@ const Footer: React.FC = () => {
       </div>
 
       {/* Footer Bottom Section */}
-      <div className="footer-bottom px-12 py-8 border-t border-[#F3EFED] pt-10 grid grid-cols-1 md:grid-cols-3 items-center">
+      <div className="footer-bottom md:px-12 px-6 md:py-8 py-14 border-t border-[#F3EFED] pt-10 grid grid-cols-1 md:grid-cols-3 items-center">
         <p
           style={{ fontFamily: 'Giphurs' }}
-          className="md:text-[16px] text-[14px] text-[#DADADA] justify-self-start"
+          className="md:text-[16px] text-[14px] text-[#DADADA] justify-self-start md:pb-0 pb-6"
         >
-          <span className="md:text-[16px] text-[14px] text-[#DADADA] font-semibold">
+          <span className="md:text-[16px] text-[14px] text-[#FAF9F8] font-semibold">
             © 2025 Sukoon Studio.
           </span>{' '}
           All rights reserved.
@@ -140,7 +140,7 @@ const Footer: React.FC = () => {
 
         <ul
           style={{ fontFamily: 'Giphurs' }}
-          className="flex gap-6 md:text-[16px] text-[14px] text-[#FAF9F8] md:justify-self-center md:col-start-2"
+          className="flex md:gap-6 gap-2 md:text-[16px] text-left text-[14px] text-[#FAF9F8] md:justify-self-center md:col-start-2"
         >
           <li>
             <a href="#">Terms & Conditions</a>
@@ -156,12 +156,10 @@ const Footer: React.FC = () => {
           </li>
         </ul>
       </div>
-
-      {/* Back to top button */}
-      {isScrolled && (
+            {isScrolled && (
         <button
           style={{ fontFamily: 'Giphurs' }}
-          className="fixed flex justify-center items-center bottom-5 right-10 gap-1 p-2 border-[1px] bg-transparent border-[#A8CFA1] text-[#FAF9F8] rounded-full"
+          className=" fixed flex justify-center items-center bottom-5 right-10 gap-1 p-2 border-[1px] bg-transparent border-[#A8CFA1] text-[#FAF9F8] rounded-full"
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
         >
           <span className="bg-[#FFFFFF] h-8 w-8 rounded-full justify-center items-center flex">
@@ -186,6 +184,8 @@ const Footer: React.FC = () => {
           Back to top
         </button>
       )}
+
+      {/* Back to top button */}
     </footer>
   );
 };
