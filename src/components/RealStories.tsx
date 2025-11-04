@@ -83,10 +83,10 @@ export default function RealStories({
   }, [paused, speed, loopItems.length]);
 
   return (
-    <section className="w-full my-20">
+    <section className="w-full sticky top-0 z-10 my-20">
         {/* Header row */}
-        <div className="h-full md:px-32 px-6 grid grid-cols-1 gap-6 md:grid-cols-[1fr_1.1fr_auto] md:items-start">
-          <div>
+        <div className="h-full z-10 md:px-32 px-6 grid grid-cols-1 gap-6 md:grid-cols-[1fr_1.1fr_auto] md:items-start">
+          <div className="">
           <div style={{ fontFamily: "Giphurs" }} className="inline-flex md:items-center md:justify-center rounded-2xl bg-[#F3EFED] px-3 py-1 md:text-[14px] text-[12px] font-light  text-[#2C3C44]">
             {overline}
           </div>
