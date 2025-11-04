@@ -126,64 +126,65 @@ const Footer: React.FC = () => {
         </div>
       </div>
 
-      {/* Footer Bottom Section */}
-      <div className="footer-bottom md:px-12 px-6 md:py-8 py-14 border-t border-[#F3EFED] pt-10 grid grid-cols-1 md:grid-cols-3 items-center">
-        <p
-          style={{ fontFamily: 'Giphurs' }}
-          className="md:text-[16px] text-[14px] text-[#DADADA] justify-self-start md:pb-0 pb-6"
-        >
-          <span className="md:text-[16px] text-[14px] text-[#FAF9F8] font-semibold">
-            © 2025 Sukoon Studio.
-          </span>{' '}
-          All rights reserved.
-        </p>
+{/* Footer Bottom Section */}
+<div className="footer-bottom md:px-12 px-6 md:py-8 py-14 border-t border-[#F3EFED] pt-10 grid grid-cols-1 md:grid-cols-3 items-center">
+  <p
+    style={{ fontFamily: 'Giphurs' }}
+    className="md:text-[16px] text-[14px] text-[#DADADA] justify-self-start md:pb-0 pb-6"
+  >
+    <span className="md:text-[16px] text-[14px] text-[#FAF9F8] font-semibold">
+      © 2025 Sukoon Studio.
+    </span>{' '}
+    All rights reserved.
+  </p>
 
-        <ul
-          style={{ fontFamily: 'Giphurs' }}
-          className="flex md:gap-6 gap-2 md:text-[16px] text-left text-[14px] text-[#FAF9F8] md:justify-self-center md:col-start-2"
-        >
-          <li>
-            <a href="#">Terms & Conditions</a>
-          </li>
-          <li>
-            <a href="#">Privacy Policy</a>
-          </li>
-          <li>
-            <a href="#">Sitemap</a>
-          </li>
-          <li>
-            <a href="#">Cookies</a>
-          </li>
-        </ul>
-      </div>
-            {isScrolled && (
-        <button
-          style={{ fontFamily: 'Giphurs' }}
-          className=" fixed flex justify-center items-center bottom-5 right-10 gap-1 p-2 border-[1px] bg-transparent border-[#A8CFA1] text-[#FAF9F8] rounded-full"
-          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-        >
-          <span className="bg-[#FFFFFF] h-8 w-8 rounded-full justify-center items-center flex">
-            <svg xmlns="http://www.w3.org/2000/svg" width="9" height="14" viewBox="0 0 9 14" fill="none">
-              <path
-                d="M3.8043 13.293L3.8043 13.893L5.0043 13.893L5.0043 13.293L4.4043 13.293L3.8043 13.293ZM4.4043 13.293L5.0043 13.293L5.0043 0.848522L4.4043 0.848522L3.8043 0.848522L3.8043 13.293L4.4043 13.293Z"
-                fill="#2C3C44"
-              />
-              <path
-                d="M7.53559 4.82832L7.95985 5.25258L8.80838 4.40405L8.38412 3.97979L7.95985 4.40405L7.53559 4.82832ZM7.95985 4.40405L8.38412 3.97979L4.82856 0.424232L4.4043 0.848497L3.98003 1.27276L7.53559 4.82832L7.95985 4.40405Z"
-                fill="#2C3C44"
-              />
-              <path
-                d="M0.848633 4.40405L4.40419 0.848497"
-                stroke="#2C3C44"
-                stroke-width="1.2"
-                stroke-linecap="square"
-                stroke-linejoin="round"
-              />
-            </svg>
-          </span>{' '}
-          Back to top
-        </button>
-      )}
+  <ul
+    style={{ fontFamily: 'Giphurs' }}
+    className="flex md:gap-6 gap-2 md:text-[16px] text-left text-[14px] text-[#FAF9F8] md:justify-self-center md:col-start-2"
+  >
+    <li>
+      <a href="#">Terms & Conditions</a>
+    </li>
+    <li>
+      <a href="#">Privacy Policy</a>
+    </li>
+    <li>
+      <a href="#">Sitemap</a>
+    </li>
+    <li>
+      <a href="#">Cookies</a>
+    </li>
+  </ul>
+
+  {isScrolled && (
+    <button
+      style={{ fontFamily: 'Giphurs' }}
+      className="w-fit md:mt-0 mt-6 flex justify-center items-center gap-1 p-2 border-[1px] bg-transparent border-[#A8CFA1] text-[#FAF9F8] rounded-full md:col-start-3 md:justify-self-end"
+      onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+    >
+      <span className="bg-[#FFFFFF] h-8 w-8 rounded-full justify-center items-center flex">
+        <svg xmlns="http://www.w3.org/2000/svg" width="9" height="14" viewBox="0 0 9 14" fill="none">
+          <path
+            d="M3.8043 13.293L3.8043 13.893L5.0043 13.893L5.0043 13.293L4.4043 13.293L3.8043 13.293ZM4.4043 13.293L5.0043 13.293L5.0043 0.848522L4.4043 0.848522L3.8043 0.848522L3.8043 13.293L4.4043 13.293Z"
+            fill="#2C3C44"
+          />
+          <path
+            d="M7.53559 4.82832L7.95985 5.25258L8.80838 4.40405L8.38412 3.97979L7.95985 4.40405L7.53559 4.82832ZM7.95985 4.40405L8.38412 3.97979L4.82856 0.424232L4.4043 0.848497L3.98003 1.27276L7.53559 4.82832L7.95985 4.40405Z"
+            fill="#2C3C44"
+          />
+          <path
+            d="M0.848633 4.40405L4.40419 0.848497"
+            stroke="#2C3C44"
+            stroke-width="1.2"
+            stroke-linecap="square"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </span>{' '}
+      Back to top
+    </button>
+  )}
+</div>
 
       {/* Back to top button */}
     </footer>
