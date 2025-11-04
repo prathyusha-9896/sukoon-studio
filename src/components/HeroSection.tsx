@@ -3,7 +3,7 @@ import React from 'react';
 const HeroSection: React.FC = () => {
   return (
     <section
-      className="h-full rounded-t-2xl items-center justify-center flex flex-col"
+      className={`h-full rounded-t-2xl items-center justify-center flex flex-col`}
       style={{
         background: `linear-gradient(180deg, rgba(44, 60, 68, 0.00) 0%, #2C3C44 95.19%), url('/Footer.png') lightgray 0px -146.516px / 100% 157.01% no-repeat`,
         minHeight: '80vh', // Ensure the section takes up the full height of the viewport

@@ -9,7 +9,6 @@ import Benefits from './components/Benefits';
 import RealStories from './components/RealStories';
 import LearnGerman from './components/learngerman/LearnGerman';
 import Footer from './components/Footer'
-import HeroSection from './components/HeroSection';
 function App() {
 
   return (
@@ -22,7 +21,6 @@ function App() {
     <PeopleBehind/>
     <Benefits/>
     <RealStories/>
-    <HeroSection/>
     <Footer/>
     </>
   )
