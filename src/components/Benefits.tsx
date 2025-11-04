@@ -25,10 +25,10 @@ export default function Benefits({
   ],
 }: BenefitsProps) {
   return (
-    <section className="w-full bg-white pr-[120px] pl-2 py-16">
-        <div className="grid grid-cols-1 gap-24 lg:grid-cols-2 lg:items-center">
+    <section className="w-full  md:pr-[120px] md:pl-2 md:py-16 py-8">
+        <div className="grid grid-cols-1 md:gap-24 gap-12 lg:grid-cols-2 lg:items-center">
           {/* Left: image card */}
-          <figure className="overflow-hidden rounded-2xl shadow-md ring-1 ring-black/5">
+          <figure className="overflow-hidden rounded-2xl md:block hidden">
             <img
               src={imageSrc}
               alt={imageAlt}
@@ -37,13 +37,13 @@ export default function Benefits({
           </figure>
 
           {/* Right: copy */}
-          <div className="max-w-xl">
-              <div className="inline-flex items-center justify-center rounded-2xl bg-[#F3EFED] px-3 py-1 text-[12px] md:text-[14px] text-[#2C3C44]">
-                {overline}
-              </div>
+          <div className="max-w-xl px-6">
+          <div style={{ fontFamily: "Giphurs" }} className="inline-flex md:items-center md:justify-center rounded-2xl bg-[#F3EFED] px-3 py-1 md:text-[14px] text-[12px] font-light  text-[#2C3C44]">
+            {overline}
+          </div>
 
             <h2
-                className="mb-auto mt-5 text-[32px] md:text-[42px] font-semibold leading-12 md:leading-[61.6px] -tracking-[0.28px]"
+                className="mb-auto py-6 text-[32px] md:text-[42px] font-semibold leading-12 md:leading-[61.6px] -tracking-[0.28px]"
                 style={{
                   color: "#2C3C44",
                   fontFamily: '"Fraunces", serif',
@@ -55,8 +55,8 @@ export default function Benefits({
             <p
               className="mb-6 text-[14px] md:text-[16px] font-normal md:leading-[25.6px] leading-[22.4px] max-w-[560px] text-left"
               style={{
-                color: "var(--Colors-Text-Secondary, #64737A)",
-                fontFamily: "Giphurs, ui-sans-serif, system-ui",
+                color: "#64737A",
+                fontFamily: "Giphurs",
               }}
             >
               {blurb}
@@ -65,10 +65,10 @@ export default function Benefits({
             {/* Features */}
             <div className="mt-6">
               <div
-              className="mb-8 text-[14px] md:text-[16px] font-semibold md:leading-[25.6px] leading-[22.4px] text-left"
+              className="md:mb-8 mb-3 text-[14px] md:text-[16px] font-semibold md:leading-[25.6px] leading-[22.4px] text-left"
               style={{
                 color: "var(--Colors-Text-Primary, #2C3C44)",
-                fontFamily: "Giphurs, ui-sans-serif, system-ui",
+                fontFamily: "Giphurs",
               }}
               >
                 Features
@@ -81,7 +81,7 @@ export default function Benefits({
                     className="text-[14px] md:text-[16px] font-normal md:leading-[25.6px] leading-[22.4px] max-w-[560px] text-left"
                     style={{
                       color: "var(--Colors-Text-Secondary, #64737A)",
-                      fontFamily: "Giphurs, ui-sans-serif, system-ui",
+                      fontFamily: "Giphurs",
                     }}
                   >
                     {f}
@@ -92,6 +92,14 @@ export default function Benefits({
               </ul>
             </div>
           </div>
+                    {/* right: image card */}
+          <figure className="overflow-hidden rounded-2xl md:hidden block mx-2.5">
+            <img
+              src={imageSrc}
+              alt={imageAlt}
+              className="h-[444px] w-full object-cover"
+            />
+          </figure>
         </div>
     </section>
   );

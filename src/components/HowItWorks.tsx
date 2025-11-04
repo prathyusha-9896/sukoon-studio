@@ -19,7 +19,7 @@ type HowItWorksProps = {
 export default function HowItWorks({
   overline = "How It Works",
   headline = "Starting therapy can feel scary. We’ve kept it simple.",
-  ctaText = "Start Your Journey →",
+  ctaText = "Start Your Journey",
   onCtaClick,
   imageSrc = "/howitworks.png",
   imageAlt = "Smiling person outdoors",
@@ -45,21 +45,22 @@ export default function HowItWorks({
   ],
 }: HowItWorksProps) {
   return (
-    <section className="w-full py-16 ">
-      <div className="mx-auto px-[120px]">
+    <section className="w-full py-16  ">
+      <div className="mx-auto px-6 md:px-[120px]">
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-3 lg:items-start">
           {/* LEFT: copy + CTA + image */}
           <div className="flex flex-col lg:flex-row items-start justify-between lg:h-full">
             {/* Text & CTA */}
             <div className="h-full flex flex-col items-center lg:items-start text-center lg:text-left flex-grow">
               {/* Overline */}
-              <div className="inline-flex items-center justify-center rounded-2xl bg-[#F3EFED] px-3 py-1 text-[12px] md:text-[14px] text-[#2C3C44]">
-                {overline}
-              </div>
+          <div style={{ fontFamily: "Giphurs" }} className="inline-flex md:items-center md:justify-center rounded-2xl bg-[#F3EFED] px-3 py-1 md:text-[14px] text-[12px] font-light  text-[#2C3C44]">
+            {overline}
+          </div>
+
 
               {/* Headline */}
               <h2
-                className="mb-auto mt-5 text-[32px] md:text-[42px] font-semibold leading-12 md:leading-[61.6px] -tracking-[0.28px]"
+                className="mb-auto py-6 text-[32px] md:text-[42px] font-semibold leading-12 md:leading-[61.6px] -tracking-[0.28px]"
                 style={{
                   color: "#2C3C44",
                   fontFamily: '"Fraunces", serif',
@@ -70,15 +71,19 @@ export default function HowItWorks({
 
               {/* CTA Button */}
               <button
-                className="rounded-full  px-5 py-3 text-[14px] md:text-[16px] font-medium"
+                className="rounded-full  px-5 py-3 text-[14px] md:text-[16px] font-medium gap-3 justify-center items-center flex"
                 style={{
                   background: "#A8CFA1",
                   color: "#2C3C44",
-                  fontFamily: "Giphurs, ui-sans-serif, system-ui",
+                  fontFamily: "Giphurs",
                 }}
                 onClick={onCtaClick}
               >
-                {ctaText}
+                {ctaText} <span><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+  <path d="M3.75 8.385H3.135V9.615H3.75V9V8.385ZM3.75 9V9.615H14.25V9V8.385H3.75V9Z" fill="#2C3C44"/>
+  <path d="M10.8151 11.5651L10.3803 12L11.25 12.8697L11.6849 12.4349L11.25 12L10.8151 11.5651ZM11.25 12L11.6849 12.4349L14.6849 9.43487L14.25 9L13.8151 8.56513L10.8151 11.5651L11.25 12Z" fill="#2C3C44"/>
+  <path d="M11.25 6L14.25 9" stroke="#2C3C44" stroke-width="1.23" stroke-linecap="square" stroke-linejoin="round"/>
+</svg></span>
               </button>
             </div>
           </div>
@@ -126,7 +131,7 @@ export default function HowItWorks({
                   {/* Step description */}
                   <p
                     className="mt-1 md:text-[16px] text-[14px] leading-7 text-gray-600 max-w-prose"
-                    style={{ fontFamily: "Giphurs, ui-sans-serif, system-ui" }}
+                    style={{ fontFamily: "Giphurs" }}
                   >
                     {s.desc}
                   </p>

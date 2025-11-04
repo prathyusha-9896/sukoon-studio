@@ -19,13 +19,13 @@ const HeroSection: React.FC = () => {
             fontFamily: '"Fraunces", serif',
           }}
         >
-          You deserve peace. <br /> You deserve to be understood.
+          You deserve peace. <br className='md:block hidden' /> You deserve to be understood.
         </h1>
         <p
-          className="mb-6 text-[16px] md:text-[18px] font-normal md:leading-[25.6px] leading-[22.4px] max-w-[560px] text-center"
+          className="mb-6 md:px-0 px-6 text-[16px] md:text-[18px] font-normal md:leading-[25.6px] leading-[22.4px] max-w-[560px] text-center"
           style={{
             color: '#F3EFED',
-            fontFamily: 'Giphurs, ui-sans-serif, system-ui',
+            fontFamily: 'Giphurs',
           }}
         >
           If you've been waiting for the right time to start therapy, maybe

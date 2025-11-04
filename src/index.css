@@ -11,7 +11,8 @@
 /* Make the page scroll normally */
 html, body, #root {
   height: auto;         /* allow natural height */
-  min-height: 100%;     /* ensure tall pages still fill */
+  min-height: 100%;  
+  background-color: #FAF9F8; 
 }
 
 body {
@@ -43,29 +44,6 @@ body {
   opacity: 1;
 }
 
-.footer-content {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-.footer-logo span {
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-
-.footer-services, .footer-resources, .footer-contact {
-  margin-top: 20px;
-}
-
-.footer-services ul, .footer-resources ul {
-  list-style: none;
-  padding: 0;
-}
-
-.footer-services li, .footer-resources li {
-  margin: 5px 0;
-}
 
 .footer-bottom {
   margin-top: 30px;

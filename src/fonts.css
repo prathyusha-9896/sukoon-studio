@@ -2,10 +2,18 @@
 
 @font-face {
   font-family: 'Giphurs';
-  src: url('/giphurs-font-family-1762143552-0/Giphurs-Regular-BF66ce98187c8ef1.otf') format('opentype');
+  src: url('/giphurs-font-family-1762143552-0//Giphurs-Regular-BF66ce9817c8ef1.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'Giphurs';
+  src: url('/giphurs-font-family-1762143552-0/Giphurs-Medium-BF66ce98181f8e0.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+}
+
 
 @font-face {
   font-family: 'Giphurs';
@@ -14,11 +22,6 @@
   font-style: normal;
 }
 
-@font-face {
-  font-family: 'Giphurs';
-  src: url('/giphurs-font-family-1762143552-0/Giphurs-Medium-BF66ce98118f80e1.otf') format('opentype');
-  font-weight: 500;
-  font-style: normal;
-}
+
 
 /* Add other font weights or styles (Light, ExtraBold, etc.) */

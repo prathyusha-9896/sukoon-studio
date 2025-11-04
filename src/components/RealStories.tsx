@@ -83,15 +83,15 @@ export default function RealStories({
   }, [paused, speed, loopItems.length]);
 
   return (
-    <section className="w-full  my-20">
+    <section className="w-full my-20">
         {/* Header row */}
-        <div className="h-full px-32 grid grid-cols-1 gap-6 md:grid-cols-[1fr_1.1fr_auto] md:items-start">
+        <div className="h-full md:px-32 px-6 grid grid-cols-1 gap-6 md:grid-cols-[1fr_1.1fr_auto] md:items-start">
           <div>
-              <div className="inline-flex items-center justify-center rounded-2xl bg-[#F3EFED] px-3 py-1 text-[12px] md:text-[14px] text-[#2C3C44]">
-                {overline}
-              </div>
+          <div style={{ fontFamily: "Giphurs" }} className="inline-flex md:items-center md:justify-center rounded-2xl bg-[#F3EFED] px-3 py-1 md:text-[14px] text-[12px] font-light  text-[#2C3C44]">
+            {overline}
+          </div>
             <h2
-                className="mt-auto text-[32px] md:text-[42px] font-semibold leading-12 md:leading-[61.6px] -tracking-[0.28px]"
+                className="md:mb-auto md:py-6 py-4 text-[32px] md:text-[42px] font-semibold leading-12 md:leading-[61.6px] -tracking-[0.28px]"
                 style={{
                   color: "#2C3C44",
                   fontFamily: '"Fraunces", serif',
@@ -102,7 +102,7 @@ export default function RealStories({
           </div>
 
           <p
-              className="mt-auto text-[14px] md:text-[16px] font-normal md:leading-[25.6px] leading-[22.4px] max-w-[560px] text-left"
+              className="mt-auto md:block hidden text-[14px] md:text-[16px] font-normal md:leading-[25.6px] leading-[22.4px] max-w-[560px] text-left"
               style={{
                 color: "var(--Colors-Text-Secondary, #64737A)",
                 fontFamily: "Giphurs, ui-sans-serif, system-ui",
@@ -111,7 +111,7 @@ export default function RealStories({
             {blurb}
           </p>
 
-          <div className="mt-2 md:mt-auto md:text-right">
+          <div className="md:mt-2 md:mt-auto md:text-right">
             <button
               onClick={onCtaClick}
                className="rounded-full  px-5 py-3 text-[14px] md:text-[16px] font-medium"
@@ -161,7 +161,7 @@ function Card({ quote, name, age }: Testimonial) {
   return (
 <figure
   className="
-    relative w-[280px] h-[198px] sm:w-[320px] lg:w-[360px] shrink-0
+    relative h-[198px] w-[320px] lg:w-[360px] shrink-0
     rounded-xl border border-black/10 bg-white p-4
     shadow-sm
     overflow-hidden

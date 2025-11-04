@@ -25,13 +25,13 @@ export default function FeelingsMatter({
   caption = "Whatever you are feeling, it’s valid — and it’s okay to ask for help.",
 }: FeelingsMatterProps) {
   return (
-    <section className="w-full bg-white">
-      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+    <section className="w-full ">
+      <div className="mx-auto max-w-6xl px-6 lg:px-8 py-12 lg:py-16">
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-2 lg:items-start">
           {/* LEFT: Copy */}
           <div>
             {/* Overline pill */}
-          <div className="inline-flex md:items-center md:justify-center rounded-2xl bg-[#F3EFED] px-3 py-1 md:text-[14px] text-[12px]  text-[#2C3C44]">
+          <div style={{ fontFamily: "Giphurs" }} className="inline-flex md:items-center md:justify-center rounded-2xl bg-[#F3EFED] px-3 py-1 md:text-[14px] text-[12px] font-light  text-[#2C3C44]">
             {overline}
           </div>
 
@@ -41,7 +41,7 @@ export default function FeelingsMatter({
               style={{
                 color: "var(--Colors-Text-Primary, #2C3C44)",
                 fontFamily:
-                  '"Fraunces 72pt Soft", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif',
+                  '"Fraunces", serif',
 
               }}
             >
@@ -49,14 +49,14 @@ export default function FeelingsMatter({
             </h2>
 
             {/* Points */}
-            <ul className="mt-6 space-y-3 text-[15px] leading-7 text-gray-600">
+            <ul className="mt-6 space-y-3 text-[16px] leading-7 text-[#64737A]">
               {points.map((p, i) => (
                 <li
                   key={i}
-                  className="relative pl-5"
-                  style={{ fontFamily: "Giphurs, ui-sans-serif, system-ui" }}
+                  className="relative md:pl-5"
+                  style={{ fontFamily: "Giphurs" }}
                 >
-                  <span className="absolute left-0 top-2.5 h-1.5 w-1.5 rounded-full bg-gray-300" />
+                  <span className="absolute left-0 top-2.5 h-1.5 w-1.5 rounded-full bg-gray-300 md:block hidden" />
                   {p}
                 </li>
               ))}
@@ -65,11 +65,18 @@ export default function FeelingsMatter({
 
           {/* RIGHT: Image + caption */}
           <div>
-            <figure className="overflow-hidden rounded-2xl shadow-md ring-1 ring-black/5">
+            <figure className="rounded-2xl md:block hidden">
               <img
                 src={imageSrc}
                 alt={imageAlt}
-                className="h-full w-full object-cover"
+                className=""
+              />
+            </figure>
+            <figure className="rounded-2xl md:hidden block">
+              <img
+                src='/feelingsmobile.png'
+                alt={imageAlt}
+                className=""
               />
             </figure>
 
