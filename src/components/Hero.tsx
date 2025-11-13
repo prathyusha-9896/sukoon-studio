@@ -3,14 +3,12 @@ import Header from "./Header";
 export default function Hero() {
   return (
     <section className="relative w-full">
-      {/* Header is absolutely positioned over the video */}
       <div className="md:absolute top-0 left-0 right-0 z-10">
         <Header />
       </div>
 
       <div className="mx-auto w-full md:pl-10">
         <div className="grid grid-cols-1 items-center lg:grid-cols-2">
-          {/* Left copy */}
           <div className="flex flex-col justify-center md:px-[116px] px-6 h-full">
             <h1
               className="mb-6 md:text-[56px] text-[40px] font-semibold md:leading-[61.6px] leading-12 md:text-left text-center md:-tracking-[0.28px]"
@@ -79,8 +77,6 @@ export default function Hero() {
               </a>
             </div>
           </div>
-
-          {/* Right video / media */}
           <div className="relative md:pt-2 pt-12 md:p-0 p-6 ">
             <div
               className="relative w-full overflow-hidden md:h-[880px] h-[440px]"
@@ -89,10 +85,9 @@ export default function Hero() {
                 borderRadius: "var(--Scale-300, 12px)",
               }}
             >
-              {/* Replace with your <video> if needed */}
               <video
                 className="h-full w-full object-cover "
-                poster="/hero.webm" // optional poster
+                poster="/hero.webm"
                 autoPlay
                 muted
                 loop
@@ -100,8 +95,6 @@ export default function Hero() {
               >
                 <source src="/hero.webm" type="video/mp4" />
               </video>
-
-              {/* Optional bottom-left caption like in the mock */}
               <div className="pointer-events-none font-giphurs absolute inset-x-0 md:left-[22%] left-1/6 bottom-[40%] md:bottom-20 p-6">
                 <div className="inline-block md:px-3 py-1 font-semibold text-center md:text-[20px] text-[16px] leading-8 text-[#FAF9F8]">
                   Exculsive care for depth <br className="md:hidden block" /> of your mind
@@ -110,8 +103,6 @@ export default function Hero() {
             </div>
           </div>
         </div>
-
-        {/* Page-side gutters similar to the screenshot’s wide canvas */}
         <div className="hidden lg:block">
           <div className="h-6" />
         </div>

@@ -3,8 +3,6 @@ import HeroSection from './HeroSection';
 
 const Footer: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-
-  // Function to handle scroll event
   const handleScroll = () => {
     if (window.scrollY > 100) {
       setIsScrolled(true);
@@ -14,11 +12,9 @@ const Footer: React.FC = () => {
   };
 
   useEffect(() => {
-    // Adding scroll event listener
     window.addEventListener('scroll', handleScroll);
 
     return () => {
-      // Cleanup event listener when the component unmounts
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
@@ -27,7 +23,6 @@ const Footer: React.FC = () => {
     <footer className={`bg-[#2C3C44] relative z-20 rounded-2xl text-white transition-transform transition-opacity duration-300 ease-in-out`}>
       <HeroSection />
       <div className="md:flex justify-between md:px-12 px-6  md:py-14 py-4">
-        {/* Logo Section */}
         <div className="flex flex-col justify-start h-[204px]">
           <div className='md:mb-auto mb-6'>
           <span className="text-3xl font-semibold">
@@ -93,8 +88,6 @@ const Footer: React.FC = () => {
             </a>
           </div>
         </div>
-
-        {/* Services Section */}
         <div className="footer-services flex flex-col justify-start gap-4">
           <h4 style={{fontFamily: "Giphurs",}}  className="md:text-base text-sm uppercase font-semibold md:mt-0 mt-6">Services</h4>
           <ul style={{fontFamily: "Giphurs",}} className="md:text-[16px] text-[14px] text-[#DADADA] space-y-3">
@@ -105,8 +98,6 @@ const Footer: React.FC = () => {
             <li>Workplace & Stress Support</li>
           </ul>
         </div>
-
-        {/* Resources Section */}
         <div className="footer-resources flex flex-col justify-start gap-4">
           <h4 style={{fontFamily: "Giphurs",}}  className="md:text-base text-sm uppercase font-semibold md:mt-0 mt-6">Resources</h4>
           <ul  style={{fontFamily: "Giphurs",}} className="md:text-[16px] text-[14px] text-[#DADADA] space-y-3">
@@ -116,8 +107,6 @@ const Footer: React.FC = () => {
             <li>Events</li>
           </ul>
         </div>
-
-        {/* Contact Info Section */}
         <div className="footer-contact flex flex-col justify-start gap-4">
           <h4 style={{fontFamily: "Giphurs",}}  className="md:text-base text-sm uppercase font-semibold md:mt-0 mt-6">Contact Info</h4>
           <ul  style={{fontFamily: "Giphurs",}} className="md:text-[16px] text-[14px] text-[#DADADA] space-y-3">
@@ -127,8 +116,6 @@ const Footer: React.FC = () => {
           </ul>
         </div>
       </div>
-
-{/* Footer Bottom Section */}
 <div className="footer-bottom md:px-12 px-6 md:py-8 py-14 border-t border-[#F3EFED] pt-10 grid grid-cols-1 md:grid-cols-3 items-center">
   <p
     style={{ fontFamily: 'Giphurs' }}
@@ -187,8 +174,6 @@ const Footer: React.FC = () => {
     </button>
   )}
 </div>
-
-      {/* Back to top button */}
     </footer>
   );
 };

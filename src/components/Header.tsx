@@ -18,7 +18,6 @@ export default function Header() {
     <header className="w-full">
       <div className="mx-auto w-full md:px-16 px-6">
         <div className="flex h-20 items-center justify-between gap-28">
-          {/* Logo */}
           <a href="#" aria-label="Sukoon" className="flex items-center gap-2">
             <svg xmlns="http://www.w3.org/2000/svg" width="138" height="32" viewBox="0 0 138 32" fill="none">
               <g clip-path="url(#clip0_303_343)">
@@ -45,8 +44,6 @@ export default function Header() {
               </defs>
             </svg>
           </a>
-
-          {/* Nav (Desktop) */}
           <nav className="hidden items-left gap-8 md:flex">
             {nav.map((n) => (
               <a
@@ -62,8 +59,6 @@ export default function Header() {
               </a>
             ))}
           </nav>
-
-          {/* CTA */}
           <div className="flex items-center gap-3 ml-auto md:block hidden">
             <a
               href="#"
@@ -76,8 +71,6 @@ export default function Header() {
               Talk to us →
             </a>
           </div>
-
-          {/* Hamburger Icon (Mobile) */}
           <button
             className="md:hidden flex items-center justify-center p-2"
             onClick={toggleMenu}
@@ -93,8 +86,6 @@ export default function Header() {
           </button>
         </div>
       </div>
-
-      {/* Slider Menu (Mobile) */}
       <div
         className={`fixed top-0 right-0 w-2/3 h-full z-10 bg-[#FAF9F8] p-6 transform ${isMenuOpen ? "translate-x-0" : "translate-x-full"} transition-transform duration-300 md:hidden`}
       >

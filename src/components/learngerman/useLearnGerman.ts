@@ -7,8 +7,6 @@ export const COLORS = {
   body: "#6B6A70",
   bannerText: "#F0EFF1",
 };
-
-// Use your actual image files here:
 const ICONS = {
   individual: "/therapy.png",
   couples: "/couple.png",
