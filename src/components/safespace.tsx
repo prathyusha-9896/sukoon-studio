@@ -79,7 +79,6 @@ export default function SafeSpace({
     return () => clearTimeout(timeoutId);
     
   }, [caption.length]);
-  // --- END OF useEffect CHANGE ---
 
   return (
     <section className="w-full justify-center items-center flex flex-col">
@@ -201,8 +200,6 @@ export default function SafeSpace({
               className="rounded-3xl"
               onError={(e) => (e.currentTarget.src = 'https://placehold.co/800x600/A8CFA1/2C3C44?text=Safe+Space')}
             />
-
-            {/* --- CHANGE HERE: Removed flex-col-reverse and space-y-reverse --- */}
             <figcaption className="pointer-events-none absolute bottom-4 right-4 md:right-12 overflow-hidden flex flex-col items-end space-y-2">
               {caption.map((text, index) => (
                 <span
@@ -225,8 +222,6 @@ export default function SafeSpace({
                 </span>
               ))}
             </figcaption>
-            {/* --- END OF CHANGES --- */}
-
           </div>
           <div className="md:block hidden">
             <div className="mx-auto mt-6 grid max-w-3xl grid-cols-3 items-start gap-4 text-left md:mt-20 ">
